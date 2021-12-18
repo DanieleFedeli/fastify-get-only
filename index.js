@@ -1,8 +1,8 @@
 'use strict'
 
 const fp = require('fastify-plugin')
-
 const defaultPayload = { error: 'Method not allowed' }
+
 async function fastifyGetOnly (
   fastify,
   { httpStatusCode = 405, errorPayload = defaultPayload }
