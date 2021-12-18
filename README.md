@@ -11,7 +11,7 @@ npm i fastify-get-only
 
 ## Usage
 Require\Import `fastify-get-only` and register.
-```
+```js
 // CommonJS
 const fastify = require('fastify')();
 
