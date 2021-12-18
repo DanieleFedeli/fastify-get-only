@@ -1,7 +1,7 @@
 {
   "name": "fastify-get-only",
   "version": "1.0.0",
-  "description": "",
+  "description": "Small plugin used in fastify app to make the app only accept GET requests",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -13,8 +13,8 @@
     "test:typescript": "tsd",
     "unit": "tap test/**/*.test.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["fastify", "fastify-get-only"],
+  "author": "daniele.fedeli",
   "license": "MIT",
   "types": "index.d.ts",
   "dependencies": {
