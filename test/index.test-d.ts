@@ -1,13 +1,19 @@
 import fastify from 'fastify'
-import example from '..'
-import { expectType } from 'tsd'
+import FastifyGetOnly from '..'
 
-let app
-try {
-  app = fastify()
-  await app.ready()
-  app.register(example)
-  expectType<() => string>(app.exampleDecorator)
-} catch (err) {
-  console.error(err)
+let app = fastify()
+
+app = fastify()
+
+async function test (): Promise<void> {
+  await app.register(FastifyGetOnly, { httpStatusCode: 200 })
+  await app.register(FastifyGetOnly, {
+    errorPayload: { error: 'Custom Error' }
+  })
+  await app.register(FastifyGetOnly, {
+    errorPayload: { error: 'Custom Error' },
+    httpStatusCode: 200
+  })
 }
+
+test().catch(err => console.error(err))

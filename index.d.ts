@@ -1,10 +1,10 @@
-import { FastifyPlugin } from "fastify";
-
-declare const fastifyGetOnly: FastifyPlugin<() => string>;
+import { FastifyPlugin } from 'fastify'
 
 export interface FastifyGetOnlyOptions {
-	httpStatusCode?: number;
-	errorPayload?: unknown;
+  httpStatusCode?: number
+  errorPayload?: unknown
 }
 
-export default fastifyGetOnly;
+declare const fastifyGetOnly: FastifyPlugin<FastifyGetOnlyOptions>
+
+export default fastifyGetOnly
