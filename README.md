@@ -2,6 +2,8 @@
 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)  ![CI workflow](https://github.com/DanieleFedeli/fastify-get-only/workflows/CI%20workflow/badge.svg)
 
+Plugin that make your fastify accepts only GET requests. It throws a 405 status code by default, but this can be changed via options.
+
 Supports Fastify versions `3.x`
 
 ## Install
